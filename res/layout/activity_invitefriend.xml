@@ -1,0 +1,103 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:woloactivityapp="http://schemas.android.com/apk/res/com.woloactivityapp.main"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootlayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/backgroundcolor" >
+
+    <com.woloactivityapp.common.CustomTextView
+        android:id="@+id/titleTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="100px"
+        android:background="@drawable/titlebar"
+        android:gravity="center"
+        android:text="Wolo"
+        android:textColor="@color/titlecolor"
+        android:textSize="60px"
+        android:textStyle="bold"
+        woloactivityapp:typeface="Roboto_Regular" >
+    </com.woloactivityapp.common.CustomTextView>
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="100px"
+        android:layout_height="100px"
+        android:background="@drawable/backbtn" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/titleTextView"
+        android:orientation="vertical"
+        android:weightSum="2" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:background="@color/graycolor"
+                android:gravity="center_vertical|left"
+                android:paddingLeft="10dp"
+                android:text="Friends on Wolo"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <ListView
+                android:id="@+id/friendsListView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:fadingEdgeLength="0px" >
+            </ListView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:background="@color/graycolor" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="10dp"
+                    android:text="Invite to Wolo"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/sendButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical|right"
+                    android:paddingRight="10dp"
+                    android:text="Send"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/inviteListView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:fadingEdgeLength="0px"
+                android:fastScrollEnabled="true"
+                android:smoothScrollbar="true" >
+            </ListView>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:woloactivityapp="http://schemas.android.com/apk/res/com.woloactivityapp.main"
+    android:id="@+id/rootlayout"
+    android:layout_width="fill_parent"
+    android:layout_height="80dp"
+    android:background="@color/backgroundcolor"
+    android:padding="10dp" >
+
+    <Button
+        android:id="@+id/itemJoinButton"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/greenbtn"
+        android:text="@string/clickjoin"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <com.woloactivityapp.common.CustomTextView
+        android:id="@+id/itemMileCustomTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="0.5 mi"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        woloactivityapp:typeface="Roboto_Light" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@+id/itemMileCustomTextView"
+        android:layout_toRightOf="@+id/itemJoinButton"
+        android:orientation="vertical" >
+
+        <com.woloactivityapp.common.CustomTextView
+            android:id="@+id/itemTitleCustomTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:text="Jog in the park"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            woloactivityapp:typeface="Roboto_Light" />
+
+        <com.woloactivityapp.common.CustomTextView
+            android:id="@+id/itemDateCustomTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mon. 9/20/13 1:00 pm"
+            android:textColor="@color/titlecolor"
+            android:textStyle="bold"
+            woloactivityapp:typeface="Roboto_Light" />
+    </LinearLayout>
+
+</RelativeLayout>

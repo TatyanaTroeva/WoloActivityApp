@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:woloactivityapp="http://schemas.android.com/apk/res/com.woloactivityapp.main"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundcolor"
+    android:orientation="vertical" >
+
+    <com.woloactivityapp.common.CustomTextView
+        android:id="@+id/titleTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="100px"
+        android:background="@drawable/titlebar"
+        android:gravity="center"
+        android:text="COOL STUFF"
+        android:textColor="@color/titlecolor"
+        android:textSize="60px"
+        android:textStyle="bold"
+        woloactivityapp:typeface="Roboto_Regular" >
+    </com.woloactivityapp.common.CustomTextView>
+
+    <FrameLayout
+        android:id="@+id/adsLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+    </FrameLayout>
+
+</LinearLayout>

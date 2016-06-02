@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:woloactivityapp="http://schemas.android.com/apk/res/com.woloactivityapp.main"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootlayout"
+    android:layout_width="fill_parent"
+    android:layout_height="80dp"
+    android:background="@color/backgroundcolor1" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:padding="10dp" >
+
+        <RelativeLayout
+            android:id="@+id/avatarRelativeLayout"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" >
+
+            <ImageView
+                android:id="@+id/avatarImageView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/black"
+                android:scaleType="centerCrop" />
+
+            <ProgressBar
+                android:id="@+id/avatarProgressBar"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/avatarRelativeLayout"
+            android:orientation="vertical" >
+
+            <com.woloactivityapp.common.CustomTextView
+                android:id="@+id/itemNameCustomTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                woloactivityapp:typeface="Roboto_Light" />
+
+            <com.woloactivityapp.common.CustomTextView
+                android:id="@+id/itemAddressCustomTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                woloactivityapp:typeface="Roboto_Light" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="79dp"
+        android:background="#4978bc" />
+
+</RelativeLayout>

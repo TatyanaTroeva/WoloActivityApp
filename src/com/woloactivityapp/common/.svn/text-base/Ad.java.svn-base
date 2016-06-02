@@ -1,0 +1,18 @@
+package com.locket.android.common;
+//package com.locket.common;
+//
+//public class Ad {
+//	public static int TYPE_IMAGE;
+//	public static int TYPE_VIDEO;
+//	
+//	private int type;
+//	private String name;
+//	private String url;
+//	
+//	public Ad(int type, String name, String url) {
+//		this.type = type;
+//		this.name = name;
+//		this.url = url;
+//	}
+//
+//}

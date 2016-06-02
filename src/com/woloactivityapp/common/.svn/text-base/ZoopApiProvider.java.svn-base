@@ -1,0 +1,124 @@
+package com.locket.android.common;
+//package com.locket.common;
+//
+//import java.io.ByteArrayOutputStream;
+//import java.io.IOException;
+//import java.net.URL;
+//import java.util.Collection;
+//import java.util.Queue;
+//import java.util.concurrent.ConcurrentLinkedQueue;
+//
+//import org.apache.http.HttpResponse;
+//import org.apache.http.HttpStatus;
+//import org.apache.http.StatusLine;
+//import org.apache.http.client.ClientProtocolException;
+//import org.apache.http.client.HttpClient;
+//import org.apache.http.client.methods.HttpGet;
+//import org.apache.http.impl.client.DefaultHttpClient;
+//
+//import android.os.AsyncTask;
+//
+///**
+// * Designed to be Async, so everything is **
+// * @author scott
+// *
+// */
+//public class ZoopApiProvider {
+//	private final URL apiHost;
+//	private final Queue<ZoopApiAction> actionStack = new ConcurrentLinkedQueue<ZoopApiAction>();
+//	private boolean postIdle = false;
+//	
+//	public ZoopApiProvider(URL apiHost) {
+//		this.apiHost = apiHost;
+//	}
+//	
+//	public void fetchNewAds(final Collection<Ad> adContainer) {
+//		new RequestTask(new ParseAdsRequestThunk(adContainer)).doInBackground(apiHost.toString());
+//	}
+//	
+//	public void fetchProfileInfo(final UserProfile profile) {
+//		new RequestTask(new ParseProfileInfoThunk(profile)).doInBackground(apiHost.toString());
+//	}
+//	
+//	public void commitUserActions(ZoopApiAction... actions) {
+//		if(postIdle) {
+//			
+//		}
+//		
+//	}
+//	
+//	public boolean isDirty() {
+//		return actionStack.isEmpty();
+//	}
+//	
+//	private class ParseAdsRequestThunk extends RequestThunk {
+//		private final Collection<Ad> adContainer;
+//		
+//		public ParseAdsRequestThunk(Collection<Ad> adContainer) {
+//			this.adContainer = adContainer;
+//		}
+//		
+//		public void apply(String response) {
+//			// do parsing here
+//		}
+//	}
+//	
+//	private class ParseProfileInfoThunk extends RequestThunk {
+//		private final UserProfile profile;
+//		
+//		public ParseProfileInfoThunk(UserProfile profile) {
+//			this.profile = profile;
+//		}
+//		
+//		public void apply(String response) {
+//			// do parsing here
+//		}
+//	}
+//	
+//	private abstract class RequestThunk {
+//		public abstract void apply(String response);
+//	}
+//	
+//	// ripped off from stackoverflow
+//	private class RequestTask extends AsyncTask<String, String, String>{
+//		final RequestThunk thunk;
+//		
+//		public RequestTask(RequestThunk thunk) {
+//			this.thunk = thunk;
+//		}
+//
+//	    @Override
+//	    protected String doInBackground(String... uri) {
+//	        HttpClient httpclient = new DefaultHttpClient();
+//	        HttpResponse response;
+//	        String responseString = null;
+//	        try {
+//	            response = httpclient.execute(new HttpGet(uri[0]));
+//	            StatusLine statusLine = response.getStatusLine();
+//	            if(statusLine.getStatusCode() == HttpStatus.SC_OK){
+//	                ByteArrayOutputStream out = new ByteArrayOutputStream();
+//	                response.getEntity().writeTo(out);
+//	                out.close();
+//	                responseString = out.toString();
+//	            } else{
+//	                //Closes the connection.
+//	                response.getEntity().getContent().close();
+//	                throw new IOException(statusLine.getReasonPhrase());
+//	            }
+//	        } catch (ClientProtocolException e) {
+//	            //TODO Handle problems..
+//	        } catch (IOException e) {
+//	            //TODO Handle problems..
+//	        }
+//	        return responseString;
+//	    }
+//
+//	    @Override
+//	    protected void onPostExecute(String result) {
+//	        super.onPostExecute(result);
+//	        thunk.apply(result);
+//	    }
+//	}
+//
+//
+//}

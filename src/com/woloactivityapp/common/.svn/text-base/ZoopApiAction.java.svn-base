@@ -1,0 +1,5 @@
+package com.locket.android.common;
+
+public class ZoopApiAction {
+
+}

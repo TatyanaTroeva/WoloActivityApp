@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:woloactivityapp="http://schemas.android.com/apk/res/com.woloactivityapp.main"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootlayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/backgroundcolor" >
+
+    <com.woloactivityapp.common.CustomTextView
+        android:id="@+id/titleTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="100px"
+        android:background="@drawable/titlebar"
+        android:gravity="center"
+        android:text="@string/messages"
+        android:textColor="@color/titlecolor"
+        android:textSize="60px"
+        android:textStyle="bold"
+        woloactivityapp:typeface="Roboto_Regular" >
+    </com.woloactivityapp.common.CustomTextView>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="fill_parent"
+        android:layout_below="@+id/titleTextView"
+        android:layout_height="fill_parent" >
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/relativeLayout2"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp" >
+
+            <LinearLayout
+                android:id="@+id/chatgrouplayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+            </LinearLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/backgroundcolor1"
+            android:padding="5dp" >
+
+            <EditText
+                android:id="@+id/chatEditText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/chatsendbtn"
+                android:background="@drawable/editback"
+                android:hint="Send Message"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:textAppearance="@android:style/TextAppearance.Small.Inverse"
+                android:textColor="@color/black" >
+
+                <requestFocus>
+                </requestFocus>
+            </EditText>
+
+            <Button
+                android:id="@+id/chatsendbtn"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/white"
+                android:textSize="40px"
+                android:text="Send"
+                android:background="@drawable/bluebtn" >
+            </Button>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

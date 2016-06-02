@@ -1,0 +1,334 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:woloactivityapp="http://schemas.android.com/apk/res/com.woloactivityapp.main"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootlayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/backgroundcolor" >
+
+    <com.woloactivityapp.common.CustomTextView
+        android:id="@+id/titleTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="100px"
+        android:background="@drawable/titlebar"
+        android:gravity="center"
+        android:text="@string/joinedactivity"
+        android:textColor="@color/titlecolor"
+        android:textSize="60px"
+        android:textStyle="bold"
+        woloactivityapp:typeface="Roboto_Regular" >
+    </com.woloactivityapp.common.CustomTextView>
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="100px"
+        android:layout_height="100px"
+        android:background="@drawable/backbtn" />
+
+    <Button
+        android:id="@+id/editButton"
+        android:layout_width="100px"
+        android:layout_height="100px"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/editbtn" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/titleTextView" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/nameLinearLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/backgroundcolor1"
+                android:orientation="horizontal"
+                android:paddingLeft="20px"
+                android:paddingRight="20px" >
+
+                <com.woloactivityapp.common.CustomTextView
+                    android:id="@+id/nameCustomTextView"
+                    android:layout_width="200px"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical|left"
+                    android:text="@string/name"
+                    android:textColor="@color/titlecolor"
+                    android:textSize="30px"
+                    woloactivityapp:typeface="Roboto_Light" />
+
+                <com.woloactivityapp.common.CustomTextView
+                    android:id="@+id/nameValCustomTextView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60px"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="20px"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginTop="20px"
+                    android:cursorVisible="true"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="10px"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="30px" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/descriptionLinearLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/darkcolor"
+                android:orientation="horizontal"
+                android:paddingLeft="20px"
+                android:paddingRight="20px" >
+
+                <com.woloactivityapp.common.CustomTextView
+                    android:id="@+id/descriptionCustomTextView"
+                    android:layout_width="200px"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical|left"
+                    android:text="@string/description"
+                    android:textColor="@color/titlecolor"
+                    android:textSize="30px"
+                    woloactivityapp:typeface="Roboto_Light" />
+
+                <com.woloactivityapp.common.CustomTextView
+                    android:id="@+id/descriptionValCustomTextView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="200px"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="20px"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginTop="20px"
+                    android:cursorVisible="true"
+                    android:gravity="left|top"
+                    android:padding="10px"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="30px" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/whenLinearLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/backgroundcolor1"
+                android:orientation="horizontal"
+                android:paddingLeft="20px"
+                android:paddingRight="20px" >
+
+                <com.woloactivityapp.common.CustomTextView
+                    android:id="@+id/whenCustomTextView"
+                    android:layout_width="200px"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical|left"
+                    android:text="@string/when"
+                    android:textColor="@color/titlecolor"
+                    android:textSize="30px"
+                    woloactivityapp:typeface="Roboto_Light" />
+
+                <com.woloactivityapp.common.CustomTextView
+                    android:id="@+id/whenValCustomTextView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60px"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="20px"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginTop="20px"
+                    android:cursorVisible="true"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="10px"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="30px" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/whereLinearLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/darkcolor"
+                android:orientation="horizontal"
+                android:paddingLeft="20px"
+                android:paddingRight="20px" >
+
+                <com.woloactivityapp.common.CustomTextView
+                    android:id="@+id/whereCustomTextView"
+                    android:layout_width="200px"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical|left"
+                    android:text="@string/where"
+                    android:textColor="@color/titlecolor"
+                    android:textSize="30px"
+                    woloactivityapp:typeface="Roboto_Light" />
+
+                <com.woloactivityapp.common.CustomTextView
+                    android:id="@+id/whereValCustomTextView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60px"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="20px"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginTop="20px"
+                    android:cursorVisible="true"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="10px"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="30px" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/maxLinearLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/backgroundcolor1"
+                android:orientation="horizontal"
+                android:paddingLeft="20px"
+                android:paddingRight="20px" >
+
+                <com.woloactivityapp.common.CustomTextView
+                    android:id="@+id/maxCustomTextView"
+                    android:layout_width="200px"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical|left"
+                    android:text="@string/maximum"
+                    android:textColor="@color/titlecolor"
+                    android:textSize="30px"
+                    woloactivityapp:typeface="Roboto_Light" />
+
+                <com.woloactivityapp.common.CustomTextView
+                    android:id="@+id/maxValCustomTextView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60px"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="20px"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginTop="20px"
+                    android:cursorVisible="true"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="10px"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="30px" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/minLinearLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/darkcolor"
+                android:orientation="horizontal"
+                android:paddingLeft="20px"
+                android:paddingRight="20px" >
+
+                <com.woloactivityapp.common.CustomTextView
+                    android:id="@+id/minCustomTextView"
+                    android:layout_width="200px"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical|left"
+                    android:text="@string/minimumage"
+                    android:textColor="@color/titlecolor"
+                    android:textSize="30px"
+                    woloactivityapp:typeface="Roboto_Light" />
+
+                <com.woloactivityapp.common.CustomTextView
+                    android:id="@+id/minValCustomTextView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60px"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="20px"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginTop="20px"
+                    android:cursorVisible="true"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="10px"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="30px" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/participantsLinearLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="100px"
+                android:background="@color/backgroundcolor1"
+                android:orientation="horizontal" >
+
+                <com.woloactivityapp.common.CustomTextView
+                    android:id="@+id/participantsCustomTextView"
+                    android:layout_width="300px"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="20px"
+                    android:gravity="center_vertical|left"
+                    android:text="Participants:"
+                    android:textColor="@color/titlecolor"
+                    android:textSize="30px"
+                    woloactivityapp:typeface="Roboto_Light" />
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#4978bc" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/joinedLinearLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/requestedLinearLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/groupChatButton"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/pinkbtn"
+                android:text="Group Chat"
+                android:textColor="@color/white"
+                android:textSize="40px" />
+
+            <Button
+                android:id="@+id/leaveButton"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bluebtn"
+                android:text="Leave"
+                android:textColor="@color/white"
+                android:textSize="40px" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

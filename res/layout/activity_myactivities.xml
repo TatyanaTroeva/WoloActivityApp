@@ -1,0 +1,102 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:woloactivityapp="http://schemas.android.com/apk/res/com.woloactivityapp.main"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundcolor" >
+
+    <com.woloactivityapp.common.CustomTextView
+        android:id="@+id/titleTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="100px"
+        android:background="@drawable/titlebar"
+        android:gravity="center"
+        android:text="@string/myactivities"
+        android:textColor="@color/titlecolor"
+        android:textSize="60px"
+        android:textStyle="bold"
+        woloactivityapp:typeface="Roboto_Regular" >
+    </com.woloactivityapp.common.CustomTextView>
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="100px"
+        android:layout_height="100px"
+        android:background="@drawable/backbtn" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/titleTextView" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <com.woloactivityapp.common.CustomTextView
+                android:id="@+id/joinedCustomTextView"
+                android:layout_width="fill_parent"
+                android:layout_height="100px"
+                android:background="@color/graycolor"
+                android:gravity="center_vertical|left"
+                android:paddingLeft="20px"
+                android:text="@string/joined"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                android:textSize="40px"
+                android:textStyle="bold"
+                woloactivityapp:typeface="Roboto_Light" />
+
+            <LinearLayout
+                android:id="@+id/joinedLinearLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <com.woloactivityapp.common.CustomTextView
+                android:id="@+id/createdCustomTextView"
+                android:layout_width="fill_parent"
+                android:layout_height="100px"
+                android:visibility="gone"
+                android:background="@color/graycolor"
+                android:gravity="center_vertical|left"
+                android:paddingLeft="20px"
+                android:text="@string/created"
+                android:textColor="@color/white"
+                android:textSize="40px"
+                android:textStyle="bold"
+                woloactivityapp:typeface="Roboto_Light" />
+
+            <LinearLayout
+                android:id="@+id/createdLinearLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+            </LinearLayout>
+            <com.woloactivityapp.common.CustomTextView
+                android:id="@+id/requestedCustomTextView"
+                android:layout_width="fill_parent"
+                android:layout_height="100px"
+                android:visibility="gone"
+                android:background="@color/graycolor"
+                android:gravity="center_vertical|left"
+                android:paddingLeft="20px"
+                android:text="@string/requested"
+                android:textColor="@color/white"
+                android:textSize="40px"
+                android:textStyle="bold"
+                woloactivityapp:typeface="Roboto_Light" />
+
+            <LinearLayout
+                android:id="@+id/requestedLinearLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

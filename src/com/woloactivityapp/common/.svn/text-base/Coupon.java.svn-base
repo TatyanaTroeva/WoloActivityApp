@@ -1,0 +1,37 @@
+package com.locket.android.common;
+//package com.locket.common;
+//
+//public class Coupon {
+//
+//	private String name;
+//	private Double price;
+//	private String desc;
+//	private int imgurl;
+//	private int coupurl;
+//	private int dispurl;
+//	
+//	public Coupon(String n, Double p, String d, int i, int c, int du) {
+//		this.name = n;
+//		this.price = p;
+//		this.desc = d;
+//		this.imgurl = i;
+//		this.coupurl = c;
+//		this.dispurl = du;
+//	}
+//	
+//	public String getName() { return this.name; }
+//	public Double getPrice() { return this.price; }
+//	public String getDesc() { return this.desc; }
+//	public int getImgUrl() {return this.imgurl; }
+//	public int getCoupUrl() {return this.coupurl; }
+//	public int getDispUrl() { return this.dispurl; }
+//	
+//	
+//	//i dunno. i just dunno
+//	public static String getPriceString(Double price) {
+//		String roundPriceString = ((int) Math.round(price * 100)) + "";
+//		
+//		return roundPriceString.substring(0, roundPriceString.length() - 2) + "." + 
+//			roundPriceString.substring(roundPriceString.length() - 2, roundPriceString.length());
+//	}
+//}

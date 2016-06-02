@@ -1,0 +1,180 @@
+package com.locket.android.common;
+
+import android.app.Application;
+import android.content.Context;
+import android.location.Criteria;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
+import android.os.Bundle;
+import android.util.Log;
+import android.widget.Toast;
+
+import com.locket.android.lockscreen.MainActivity;
+
+public class LocketApp extends Application{
+	private LocationManager locationManager;
+	private boolean gps_enabled=false,network_enabled=false;
+	private static final long UPDATE_INTERVAL_TIME = 100000 * 60 * 1000; // minutes * seconds * milliseconds
+	public Location location;
+	private static int totalAds; 
+	private static String [] urls; 
+	private static String [] ids;
+	@Override
+	public void onCreate() {
+		super.onCreate();
+		getUserLocation();
+		if (location == null) {
+			getLastBestKnownLocation();
+		}
+		MainActivity.setImageDownloadInterval(this);
+	}
+	
+	/**
+	 * This function display alert if GPS is disable and if it is enable than it gets the
+	 * user current location.
+	 */
+	private void getUserLocation(){
+		try {
+			if(!getLocation()){
+//				showGPSDisabledAlertToUser(context);
+				Toast.makeText(this, "GPS is not enabled.", Toast.LENGTH_SHORT).show();
+				Log.v("GPS", "GPS is not enabled.");
+			}else{
+				if(locationManager == null)
+					locationManager = (LocationManager)this.getSystemService(Context.LOCATION_SERVICE);
+				if(gps_enabled){
+					locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,UPDATE_INTERVAL_TIME, 0, locationListenerGps);
+				}
+				if(network_enabled){
+					locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, UPDATE_INTERVAL_TIME, 0, locationListenerNetwork);
+				}else{
+					//Do Nothing				
+				}
+				Criteria criteria = new Criteria();
+				String best = locationManager.getBestProvider(criteria, true);
+				Log.v("Provider===", best);
+				if (best != null) {
+					Location location = locationManager.getLastKnownLocation(best);
+					if (location != null) {
+						Log.e("best known location", location.getLatitude()+", "+location.getLongitude());
+						this.location = location;
+					}else{
+						//					getLocation();
+						if(gps_enabled){
+							locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, UPDATE_INTERVAL_TIME, 0, locationListenerGps);
+						}else if(network_enabled){
+							locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, UPDATE_INTERVAL_TIME, 0, locationListenerNetwork);
+						}
+					}
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public static void setUrls(String [] url_list){
+		urls = url_list;
+	}
+	
+	public static String getUrl(int type){
+    	return urls[type];
+	}
+	
+	public static String getIds(int type){
+		return ids[type];
+	}
+	
+	public static int getTotalAds(){
+		return totalAds;
+	}
+	
+	public static void setTotalAds(int  num){
+	     totalAds = num;
+	}
+	
+	public static void setAdValues(int num,String [] adlinks,String []  idsList){
+		totalAds = num;
+		urls = adlinks;
+		  ids = idsList;
+	}
+	
+
+	/**
+	 * @return boolean value based on if gps or network enable or not in order to get location.
+	 */
+	public boolean getLocation()
+	{
+		try {
+			//I use LocationResult callback class to pass location value from MyLocation to user code.
+			locationManager = (LocationManager)this.getSystemService(Context.LOCATION_SERVICE);
+
+			//exceptions will be thrown if provider is not permitted.
+			try{gps_enabled=locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);}catch(Exception ex){}
+			try{network_enabled=locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);}catch(Exception ex){}
+
+			//don't start listeners if no provider is enabled
+			if(!gps_enabled && !network_enabled){
+				return false;
+			}
+			/*else if(gps_enabled){
+				locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListenerGps);
+//				return GetLocation.location;
+			}else if(network_enabled){
+				locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationListenerNetwork);
+//				return GetLocation.location;
+			}*/
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return true;
+	}
+	/**
+	 * Location Listener for GPS.
+	 */
+	LocationListener locationListenerGps = new LocationListener() {
+		public void onLocationChanged(Location location) {
+			try {
+				if(location!=null){
+					LocketApp.this.location = location;
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		public void onProviderDisabled(String provider) {}
+		public void onProviderEnabled(String provider) {}
+		public void onStatusChanged(String provider, int status, Bundle extras) {}
+	};
+
+	/**
+	 * Location Listener for Network.
+	 */
+	LocationListener locationListenerNetwork = new LocationListener() {
+		public void onLocationChanged(Location location) {
+			try {
+				if(location!=null){
+					LocketApp.this.location = location;
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		public void onProviderDisabled(String provider) {}
+		public void onProviderEnabled(String provider) {}
+		public void onStatusChanged(String provider, int status, Bundle extras) {}
+	};
+	
+	private void getLastBestKnownLocation(){
+		Criteria criteria = new Criteria();
+		String best = locationManager.getBestProvider(criteria, true);
+		if (best != null) {
+			Location location = locationManager.getLastKnownLocation(best);
+			if (location != null) {
+				Log.e("best known location", location.getLatitude()+", "+location.getLongitude());
+				this.location = location;
+			}
+		}
+	}
+}

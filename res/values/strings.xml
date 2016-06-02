@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Wolo</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="password">Password</string>
+    <string name="confirmpassword">Confirm Password</string>
+    <string name="login">LOGIN</string>
+    <string name="signin">Sign in</string>
+    <string name="register">Register</string>
+    <string name="registration">REGISTRATION</string>
+    <string name="forgotpassword">&lt;u>Forgot Password?&lt;/u></string>
+    <string name="yourname">Your Name</string>
+    <string name="youremail">Your Email</string>
+    <string name="submit">Submit</string>
+    <string name="wolo">Wolo</string>
+    <string name="searchforpeople">Search for People</string>
+    <string name="profile">PROFILE</string>
+    <string name="editprofile">Edit Profile</string>
+    <string name="saveprofile">Save Profile</string>
+    <string name="name">Name:</string>
+    <string name="age">Age:</string>
+    <string name="interests">Interests:</string>
+    <string name="gender">Gender:</string>
+    <string name="education">Education:</string>
+    <string name="location">Location:</string>
+    <string name="job">Job:</string>
+    <string name="entertags">Enter Tags Keywords</string>
+    <string name="requestjoin">Request\nto Join</string>
+    <string name="clickjoin">Click\nto Join</string>
+    <string name="searchmessage">Search messages</string>
+    <string name="messages">MESSAGES</string>
+    <string name="settings">SETTINGS</string>
+    <string name="locationradius">Location Radius</string>
+    <string name="maximum">Maximum #\nof participants</string>
+    <string name="time">Happening within</string>
+    <string name="about">About\nTerms of Service</string>
+    <string name="myactivities">MY ACTIVITIES</string>
+    <string name="joined">JOINED</string>
+    <string name="created">CREATED</string>
+    <string name="requested">REQUESTED</string>
+    <string name="createactivity">CREATE ACTIVITY</string>
+    <string name="description">Description:</string>
+    <string name="when">When:</string>
+    <string name="where">Where:</string>
+    <string name="minimumage">Minimum Age:</string>
+    <string name="create">Create</string>
+    <string name="cancel">Cancel</string>
+    <string name="tagbox">Tag Box</string>
+    <string name="createdactivity">CREATED ACTIVITY</string>
+    <string name="joinedactivity">JOINED ACTIVITY</string>
+    <string name="error_firstname">Enter a valid firstname</string>
+    <string name="error_password">Enter a valid password</string>
+    <string name="error_field">Fill in the blanks</string>
+    <string name="error_lastname">Enter a valid user lastname</string>
+    <string name="error_phone">Enter a valid phone number</string>
+    <string name="error_email">Enter a valid email address</string>
+    <string name="fail_connect">Failed to connect to server. Please check your network status and try again.</string>
+    <string name="ok">OK</string>
+    <string name="flurry_api_key">Y36M7ZVT5HXQ25JG3D4C</string>
+    <string name="adSpaceName">Takeover</string>
+
+</resources>

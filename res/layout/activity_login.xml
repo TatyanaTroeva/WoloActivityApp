@@ -1,0 +1,95 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:woloactivityapp="http://schemas.android.com/apk/res/com.woloactivityapp.main"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundcolor" >
+
+    <com.woloactivityapp.common.CustomTextView
+        android:id="@+id/titleTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="100px"
+        android:background="@drawable/titlebar"
+        android:gravity="center"
+        android:text="@string/login"
+        android:textColor="@color/titlecolor"
+        android:textSize="60px"
+        android:textStyle="bold"
+        woloactivityapp:typeface="Roboto_Regular" >
+    </com.woloactivityapp.common.CustomTextView>
+
+    <EditText
+        android:id="@+id/emailEditText"
+        android:layout_width="590px"
+        android:layout_height="100px"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200px"
+        android:background="@color/white"
+        android:cursorVisible="true"
+        android:gravity="left|center_vertical"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:padding="4sp"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textCursorDrawable="@null"
+        android:textSize="40px" />
+
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="590px"
+        android:layout_height="100px"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="350px"
+        android:background="@color/white"
+        android:cursorVisible="true"
+        android:gravity="left|center_vertical"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:padding="4sp"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textCursorDrawable="@null" />
+
+    <Button
+        android:id="@+id/signinButton"
+        android:layout_width="590px"
+        android:layout_height="130px"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="550px"
+        android:background="@drawable/bluebtn"
+        android:gravity="center"
+        android:padding="4sp"
+        android:singleLine="true"
+        android:text="@string/signin"
+        android:textColor="@color/white"
+        android:textSize="60px" />
+
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="590px"
+        android:layout_height="130px"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="700px"
+        android:background="@drawable/pinkbtn"
+        android:gravity="center"
+        android:padding="4sp"
+        android:singleLine="true"
+        android:text="@string/register"
+        android:textColor="@color/white"
+        android:textSize="60px" />
+
+    <com.woloactivityapp.common.CustomTextView
+        android:id="@+id/forgotTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="1000px"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="40px"
+        woloactivityapp:typeface="Roboto_Light" >
+    </com.woloactivityapp.common.CustomTextView>
+
+</RelativeLayout>

@@ -1,0 +1,70 @@
+
+package com.locket.android.adapters;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.TextView;
+import com.locket.android.R;
+public class SpinnerAdapter extends BaseAdapter {
+
+	private LayoutInflater mInflater;
+	String[] couponList;
+	Context context;
+	OnClickListener peopleOnClickListener;
+
+	public SpinnerAdapter(Context c,String[] coupons) {
+
+		couponList = coupons;
+		context = c;
+
+		mInflater = LayoutInflater.from(c);
+
+	}
+
+	@Override
+	public int getCount() {
+		return couponList.length;
+	}
+
+	@Override
+	public Object getItem(int arg0) {
+		return couponList[arg0];
+	}
+
+	@Override
+	public long getItemId(int arg0) {
+		return arg0;
+	}
+
+	@Override
+	public View getView(int position, View convertView, ViewGroup parent) {
+
+		ViewHolder holder;
+		if (convertView == null) {
+			convertView = mInflater.inflate(R.layout.spiner_dropdown_row, null);
+
+			holder = new ViewHolder();
+
+			holder.name = (TextView) convertView
+					.findViewById(R.id.labelTextView);
+
+			convertView.setTag(holder);
+		} else {
+			holder = (ViewHolder) convertView.getTag();
+		}
+
+		holder.name.setText( couponList[position]);
+
+		return convertView;
+	}
+
+	static class ViewHolder {
+
+		TextView name;
+
+	}
+}

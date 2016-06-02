@@ -1,0 +1,112 @@
+package com.locket.android.common;
+
+import java.util.Random;
+
+import com.locket.android.lockscreen.LockscreenReceiver;
+import com.locket.android.lockscreen.ServiceStarter;
+import com.locket.android.R;
+
+import android.R.drawable;
+import android.app.Application;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.util.Log;
+import com.locket.android.R;
+public class locketApplication extends Application
+{
+
+	private static String url;
+	private static int drawableId;
+	private static Context mAppContext;
+	private static Context contextDash;
+	private static Context contextHelp;
+	private static Context contextMyaccount;
+	private static Context contextWelcome;
+	private static Context contextLoading;
+	private static int impression;
+	
+	private IntentFilter filter;
+	private IntentFilter filter1;
+	private IntentFilter filter2;
+	
+	private LockscreenReceiver mReceiver = new LockscreenReceiver();
+	private ServiceStarter mReceiver1 = new ServiceStarter();
+	
+	public void onCreate()
+	{
+		super.onCreate();
+		locketApplication.mAppContext = getApplicationContext();
+	//	setRandomAdsUrls();
+	
+	}
+	
+	public static void saveDashContext(Context context){
+		contextDash = context;
+	}
+
+	public static Context getDashContext(){
+		return contextDash;
+	}
+	
+	public static void saveHelpContext(Context context){
+		contextHelp = context;
+	}
+
+	public static Context getHelpContext(){
+		return contextHelp;
+	}
+	
+	public static void saveWelcomeContext(Context context){
+		contextWelcome = context;
+	}
+
+	public static Context getWelcomeContext(){
+		return contextWelcome;
+	}
+	
+	public static void saveLoadingContext(Context context){
+		contextLoading= context;
+	}
+
+	public static Context getLoadingContext(){
+		return contextLoading;
+	}
+	
+	public static void saveMyaccountContext(Context context){
+		contextMyaccount = context;
+	}
+
+	public static Context getMyaccountContext(){
+		return contextMyaccount;
+	}
+	
+	public static Context getContext()
+	{
+		return mAppContext;
+	}
+	public static int getImpression() {
+		return impression;
+	}
+	public static void setImpression(int impression) {
+		locketApplication.impression = impression;
+	}
+	
+
+	public static int getId(){
+		return drawableId;
+	}
+	
+	public static String getUrl(){
+		return url;
+	}
+
+
+	public void ontrim(){
+		super.onTrimMemory(BIND_NOT_FOREGROUND);
+		Log.d("hima","I am destroyed");
+		
+	}
+
+
+}

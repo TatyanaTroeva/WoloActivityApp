@@ -1,0 +1,206 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:woloactivityapp="http://schemas.android.com/apk/res/com.woloactivityapp.main"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootlayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/backgroundcolor" >
+
+    <com.woloactivityapp.common.CustomTextView
+        android:id="@+id/titleTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="100px"
+        android:background="@drawable/titlebar"
+        android:gravity="center"
+        android:text="@string/profile"
+        android:textColor="@color/titlecolor"
+        android:textSize="60px"
+        android:textStyle="bold"
+        woloactivityapp:typeface="Roboto_Regular" >
+    </com.woloactivityapp.common.CustomTextView>
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="100px"
+        android:layout_height="100px"
+        android:background="@drawable/backbtn" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/titleTextView" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/profileImageView"
+                android:layout_width="640px"
+                android:layout_height="400px"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20px"
+                android:background="@color/black" />
+
+            <ProgressBar
+                android:id="@+id/photoProgressBar"
+                android:layout_width="60px"
+                android:layout_height="60px"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="190px" />
+
+            <LinearLayout
+                android:id="@+id/infoLinearLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profileImageView"
+                android:layout_marginTop="30px"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/firstnameLinearLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50px"
+                    android:background="@color/darkcolor"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20px"
+                    android:paddingRight="20px" >
+
+                    <com.woloactivityapp.common.CustomTextView
+                        android:id="@+id/firstnameCustomTextView"
+                        android:layout_width="200px"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical|left"
+                        android:text="First Name"
+                        android:textColor="@color/titlecolor"
+                        android:textSize="30px"
+                        woloactivityapp:typeface="Roboto_Light" />
+
+                    <EditText
+                        android:id="@+id/firstnameEditText"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="20px"
+                        android:background="@android:color/transparent"
+                        android:enabled="false"
+                        android:gravity="center_vertical|left"
+                        android:imeOptions="actionNext"
+                        android:singleLine="true"
+                        android:text="Mike"
+                        android:textColor="@color/white"
+                        android:textSize="30px" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lastnameLinearLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50px"
+                    android:background="@color/backgroundcolor1"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20px"
+                    android:paddingRight="20px" >
+
+                    <com.woloactivityapp.common.CustomTextView
+                        android:id="@+id/lastnameCustomTextView"
+                        android:layout_width="200px"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical|left"
+                        android:text="Last Name"
+                        android:textColor="@color/titlecolor"
+                        android:textSize="30px"
+                        woloactivityapp:typeface="Roboto_Light" />
+
+                    <EditText
+                        android:id="@+id/lastnameEditText"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="20px"
+                        android:background="@android:color/transparent"
+                        android:enabled="false"
+                        android:gravity="center_vertical|left"
+                        android:imeOptions="actionNext"
+                        android:singleLine="true"
+                        android:text="Mike"
+                        android:textColor="@color/white"
+                        android:textSize="30px" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ageLinearLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50px"
+                    android:background="@color/darkcolor"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20px"
+                    android:paddingRight="20px" >
+
+                    <com.woloactivityapp.common.CustomTextView
+                        android:id="@+id/ageCustomTextView"
+                        android:layout_width="200px"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical|left"
+                        android:text="@string/age"
+                        android:textColor="@color/titlecolor"
+                        android:textSize="30px"
+                        woloactivityapp:typeface="Roboto_Light" />
+
+                    <EditText
+                        android:id="@+id/ageEditText"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="20px"
+                        android:background="@android:color/transparent"
+                        android:enabled="false"
+                        android:gravity="center_vertical|left"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberSigned"
+                        android:singleLine="true"
+                        android:text="23"
+                        android:textColor="@color/white"
+                        android:textSize="30px" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/aboutmeLinearLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="200px"
+                    android:background="@color/backgroundcolor1"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20px"
+                    android:paddingRight="20px" >
+
+                    <com.woloactivityapp.common.CustomTextView
+                        android:id="@+id/aboutmeCustomTextView"
+                        android:layout_width="200px"
+                        android:layout_height="50px"
+                        android:layout_gravity="left"
+                        android:gravity="center_vertical|left"
+                        android:text="About me"
+                        android:textColor="@color/titlecolor"
+                        android:textSize="30px"
+                        woloactivityapp:typeface="Roboto_Light" />
+
+                    <com.woloactivityapp.common.CustomTextView
+                        android:id="@+id/aboutmeValCustomTextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="200px"
+                        android:layout_gravity="top"
+                        android:layout_marginLeft="20px"
+                        android:background="@android:color/transparent"
+                        android:gravity="top|left"
+                        android:imeOptions="actionDone"
+                        android:paddingTop="5px"
+                        android:textColor="@color/white"
+                        android:textSize="30px" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

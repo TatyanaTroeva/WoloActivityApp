@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:background="@color/backgroundcolor1"
+    android:orientation="vertical"
+    android:padding="20px" >
+
+    <Button
+        android:id="@+id/gpsButton"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_weight="1"
+        android:background="@drawable/bluebtn"
+        android:text="Use gps location"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/pinButton"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/bluebtn"
+        android:text="Pin my location"
+        android:textColor="@color/white" />
+
+</LinearLayout>

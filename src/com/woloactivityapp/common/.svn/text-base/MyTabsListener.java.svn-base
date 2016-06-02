@@ -1,0 +1,30 @@
+package com.locket.android.common;
+//package com.locket.common;
+//
+//import com.locket.zoopdroid.R;
+//
+//import android.app.ActionBar.Tab;
+//import android.app.ActionBar;
+//import android.app.Fragment;
+//import android.app.FragmentTransaction;
+//
+//public class MyTabsListener implements ActionBar.TabListener {
+//
+//    private Fragment fragment;
+//
+//    public MyTabsListener(Fragment fragment) {
+//        this.fragment = fragment;
+//    }
+//
+//    public void onTabReselected(Tab tab, FragmentTransaction ft) {
+//    }
+//
+//    public void onTabSelected(Tab tab, FragmentTransaction ft) {
+//        //ft.add(R.id.fragment_container, fragment, null);
+//    }
+//
+//    public void onTabUnselected(Tab tab, FragmentTransaction ft) {
+//        // some people needed this line as well to make it work: 
+//        //ft.remove(fragment);	
+//    }
+//}

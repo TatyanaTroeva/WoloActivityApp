@@ -1,0 +1,28 @@
+package com.locket.android.common;
+//package com.locket.common;
+//
+//public class UserProfile {
+//	
+//	private int totalValue = 0;
+//	private int currentValue = 0;
+//	private int rank = 0;
+//	
+//	public int getTotalValue() {
+//		return totalValue;
+//	}
+//	public void setTotalValue(int totalValue) {
+//		this.totalValue = totalValue;
+//	}
+//	public int getCurrentValue() {
+//		return currentValue;
+//	}
+//	public void setCurrentValue(int currentValue) {
+//		this.currentValue = currentValue;
+//	}
+//	public int getRank() {
+//		return rank;
+//	}
+//	public void setRank(int rank) {
+//		this.rank = rank;
+//	}
+//}

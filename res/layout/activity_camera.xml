@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <FrameLayout
+        android:id="@+id/camera_preview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent" 
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/backgroundcolor" >
+
+        <Button
+            android:id="@+id/camerabtn"
+            android:layout_width="110dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/camerabtn" />
+    </RelativeLayout>
+
+</RelativeLayout>

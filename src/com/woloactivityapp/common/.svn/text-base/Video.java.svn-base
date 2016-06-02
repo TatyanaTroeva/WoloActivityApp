@@ -1,0 +1,27 @@
+package com.locket.android.common;
+
+public class Video {
+
+	private String name;
+	private Double price;
+	private String desc;
+	private int vidurl;
+	private int icon;
+	private int dispurl;
+	
+	public Video(String n, Double p, String d, int v, int i, int du) {
+		this.name = n;
+		this.price = p;
+		this.desc = d;
+		this.vidurl = v;
+		this.icon = i;
+		this.dispurl = du;
+	}
+	
+	public String getName() { return this.name; }
+	public Double getPrice() { return this.price; }
+	public String getDesc() { return this.desc; }
+	public int getVidUrl() {return this.vidurl; }
+	public int getIcon() { return this.icon; }
+	public int getDispUrl() { return this.dispurl; }
+}

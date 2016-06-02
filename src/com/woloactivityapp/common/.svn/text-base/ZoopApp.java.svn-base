@@ -1,0 +1,245 @@
+package com.locket.android.common;
+//package com.locket.common;
+//
+//import java.math.BigDecimal;
+//import java.util.ArrayList;
+//import java.util.Random;
+//
+////import com.adsdk.sdk.banner.AdView;
+//import com.locket.zoopdroid.R;
+//import com.locket.common.Coupon;
+//import com.locket.common.Video;
+//import com.locket.databases.Databases;
+//
+//import android.app.Application;
+//import android.util.Log;
+//
+////this whole thing is the BIGGEST HACK IN THE WORLD since I don't have any fucking time
+//public class ZoopApp extends Application{
+//	private Double totalCollection = 5.0;
+//	private Double redeemedCollection = 2.0;
+//	private boolean loggedIn = false;
+//
+//	//private AdView mAdView;
+//	
+//	private ArrayList<Coupon> allcoupons = new ArrayList<Coupon>();
+//	private ArrayList<Video> allvideos = new ArrayList<Video>();
+//	private ArrayList<App> allapps = new ArrayList<App>();
+//	
+//	private Coupon lockCoupon;
+//	private Video lockVideo;
+//	private App lockApp;
+//	
+//	private ArrayList<String> seencoupons = new ArrayList<String>();
+//	private ArrayList<String> seenvideos = new ArrayList<String>();
+//	private ArrayList<String> seenapps = new ArrayList<String>();
+//	
+//	public void populate() {
+//		Log.d("hima","populating the coupons");
+//		allcoupons.clear();
+//		seencoupons.clear();
+//		allapps.clear();
+//		//AdDatabase getInfo = new AdDatabase(getApplicationContext()); 
+//		//getInfo.getSummary();
+//		//getInfo.insert();
+//		//getInfo.queryDatabase();
+////		mAdView = new AdView(this,
+////				"http://adserver.locketnyc.com/john_madserve/md.request.php",
+////				"979138497891df57d6e4c9c242e838b6", true, true);
+//		Log.d("hima","got the coupon from server "); 
+//	    //Log.d("hima","got the coupon from server "+mAdView.blacccccClickU());
+//		seencoupons.add("Starbucks Frappucino");
+//		seencoupons.add("Godiva Gems");
+////		allcoupons.add(new Coupon("burton", 0.02, "US Open Burton",
+////				R.drawable.burton, R.drawable.burton, R.drawable.burton));
+////		allcoupons.add(new Coupon("burberry", 0.03, "Burberry Sale",
+////				R.drawable.burberry, R.drawable.burberry, R.drawable.burberry));
+////		allcoupons.add(new Coupon("bryce", 0.02, "Bryce Dallas Howard",
+////				R.drawable.bryce, R.drawable.bryce, R.drawable.bryce));
+////		allcoupons.add(new Coupon("mcsc", 0.01, "MCSC",
+////				R.drawable.mcsc, R.drawable.mcsc, R.drawable.mcsc));
+////		allcoupons.add(new Coupon("m4", 0.02, "New TV Show",
+////				R.drawable.m421, R.drawable.m421, R.drawable.m421));
+////		
+//		
+//		allvideos.clear();
+//		seenvideos.clear();
+//		seenapps.clear();
+////		allvideos.add(new Video("colehann", 0.12, "Coming soon: colehann",
+////				R.drawable.colehann, R.drawable.colehann, R.drawable.colehann));
+////		allvideos.add(new Video("keyvisual", 0.10, "Coming soon: keyvisual",
+////				R.drawable.keyvisual, R.drawable.keyvisual, R.drawable.keyvisual));
+////		allvideos.add(new Video("moma", 0.12, "Coming soon: moma",
+////				R.drawable.moma, R.drawable.moma, R.drawable.moma));
+////		allvideos.add(new Video("Gatorade", 0.11, "Coming Soon: Gatorade",
+////				R.drawable.gatorade, R.drawable.gatorade, R.drawable.gatorade));
+////		
+////		
+////		allapps.add(new App("fruit", 0.10, "New Fruit Ninja app is amazing!",
+////				R.drawable.fruit_ninja, R.drawable.fruit_ninja,
+////				"market://details?id=com.halfbrick.fruitninja"));
+////		allapps.add(new App("call", 0.12, "Download the new Call of Duty game",
+////				R.drawable.call_of_duty_4_modern_warfare, R.drawable.call_of_duty_4_modern_warfare,
+////				"market://details?id=com.atv.blackops"));
+////		allapps.add(new App("zomb", 0.10, "Download the new Plants and Zombies game",
+////				R.drawable.plants_vs_zombies, R.drawable.plants_vs_zombies,
+////     			"market://details?id=com.popcap.pvz_na"));
+//// 		allapps.add(new App("racing", 0.11, "Real Racing!",
+//// 				R.drawable.real_racing_3, R.drawable.real_racing_3,
+////				"market://details?id=com.ea.games.r3_na"));
+//
+//	}
+//	
+//	public void login() {
+//		loggedIn = true;
+//	}
+//	
+//	public boolean wasLoggedIn() {
+//		return loggedIn;
+//	}
+//	
+//	//coupon hack
+//	public void setRandomCoupon() {
+//		this.populate();
+//		final int totalAds = this.allcoupons.size() - this.seencoupons.size();
+//		Random generator = new Random();
+//		final int couponPos = generator.nextInt(this.allcoupons.size() - this.seencoupons.size());
+//		final int videoPos = generator.nextInt(this.allvideos.size() - this.seenvideos.size());
+//		final int appPos = generator.nextInt(this.allapps.size() - this.seenapps.size());
+//
+//		//select ad
+//		lockCoupon = this.getNewCoupons().get(couponPos);
+//		lockVideo = this.getNewVideos().get(videoPos);
+//		lockApp = this.getNewApps().get(appPos);
+//		
+//	}
+//	
+//	public Video getLockVideo()
+//	{
+//		return this.lockVideo;
+//	}
+//	
+//	public App getLockApp(){
+//		return this.lockApp;
+//	}
+//	
+//	public Coupon getLockCoupon() {
+//		return this.lockCoupon;
+//	}
+//	
+//	public void incColl(Double price) {
+//		totalCollection += price;
+//	}
+//	
+//	public void decColl(Double price) {
+//		redeemedCollection += price;
+//	}
+//	
+//	public Double getTotalCollection() {
+//		return Math.round(100 * (totalCollection)) / 100.0;
+//	}
+//	
+//	public String getTotalCollString() {
+//		return Coupon.getPriceString(getTotalCollection());
+//	}
+//	
+//	public Double getCurrCollection() {
+//		return Math.round(100 * (totalCollection - redeemedCollection)) / 100.0;
+//	}
+//	
+//	public String getCurrCollString() {
+//		return Coupon.getPriceString(getCurrCollection());
+//	}
+//	
+//	//leave me alone
+//	public void seeCoupon(Coupon c) {
+//		seencoupons.add(c.getName());
+//		totalCollection += c.getPrice();
+//	}
+//	
+//	public void seeVideo(Video v) {
+//		seenvideos.add(v.getName());
+//		totalCollection += v.getPrice();
+//	}
+//	
+//	public ArrayList<Coupon> getNewCoupons() {
+//		ArrayList<Coupon> coupons = new ArrayList<Coupon>();
+//	    for (Coupon c: allcoupons) {
+//	    	if (!seencoupons.contains(c.getName())) {
+//	    		coupons.add(c);
+//	    	}
+//	    }
+//	    Log.d("zoop", coupons.size() + " ");
+//	    return coupons;
+//	}
+//	
+//	public ArrayList<Video> getNewVideos() {
+//		ArrayList<Video> videos = new ArrayList<Video>();
+//	    for (Video v: allvideos) {
+//	    	if (!seenvideos.contains(v.getName())) {
+//	    		videos.add(v);
+//	    	}
+//	    }
+//	    return videos;
+//	}
+//	
+//	public ArrayList<Coupon> getSeenCoupons() {
+//		ArrayList<Coupon> coupons = new ArrayList<Coupon>();
+//	    for (Coupon c: allcoupons) {
+//	    	if (seencoupons.contains(c.getName())) {
+//	    		coupons.add(c);
+//	    	}
+//	    }
+//	    return coupons;
+//	}
+//	
+//	public ArrayList<App> getNewApps() {
+//		ArrayList<App> apps = new ArrayList<App>();
+//	    for (App v: allapps) {
+//	    	if (!seenapps.contains(v.getName())) {
+//	    		apps.add(v);
+//	    	}
+//	    }
+//	    return apps;
+//	}
+//	
+//	public ArrayList<App> getSeenApps() {
+//		ArrayList<App> apps = new ArrayList<App>();
+//	    for (App c: allapps) {
+//	    	if (seenapps.contains(c.getName())) {
+//	    		apps.add(c);
+//	    	}
+//	    }
+//	    return apps;
+//	}
+//	
+//	public ArrayList<Video> getSeenVideos() {
+//		ArrayList<Video> videos = new ArrayList<Video>();
+//	    for (Video v: allvideos) {
+//	    	if (seenvideos.contains(v.getName())) {
+//	    		videos.add(v);
+//	    	}
+//	    }
+//	    return videos;
+//	}
+//	
+//	public Coupon getCouponByName(String name) {
+//		Coupon retCoupon = allcoupons.get(0);
+//		for (Coupon c: allcoupons) {
+//			if (c.getName().equals(name)) {
+//				retCoupon = c;
+//			}
+//		}
+//		return retCoupon;
+//	}
+//	
+//	public App getAppByName(String name) {
+//		App retCoupon = allapps.get(0);
+//		for (App c: allapps) {
+//			if (c.getName().equals(name)) {
+//				retCoupon = c;
+//			}
+//		}
+//		return retCoupon;
+//	}
+//}

@@ -1,0 +1,312 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:woloactivityapp="http://schemas.android.com/apk/res/com.woloactivityapp.main"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootlayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/backgroundcolor1" >
+
+    <com.woloactivityapp.common.CustomTextView
+        android:id="@+id/titleTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="100px"
+        android:background="@drawable/titlebar"
+        android:gravity="center"
+        android:text="@string/createactivity"
+        android:textColor="@color/titlecolor"
+        android:textSize="60px"
+        android:textStyle="bold"
+        woloactivityapp:typeface="Roboto_Regular" >
+    </com.woloactivityapp.common.CustomTextView>
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="100px"
+        android:layout_height="100px"
+        android:background="@drawable/backbtn" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/titleTextView"
+        android:background="@color/backgroundcolor" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/nameLinearLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/backgroundcolor1"
+                android:orientation="horizontal"
+                android:paddingLeft="20px"
+                android:paddingRight="20px" >
+
+                <EditText
+                    android:id="@+id/nameEditText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60px"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="20px"
+                    android:layout_marginLeft="10px"
+                    android:layout_marginTop="20px"
+                    android:background="@drawable/edittext_modified_states"
+                    android:focusable="true"
+                    android:gravity="center_vertical|left"
+                    android:hint="Name"
+                    android:paddingLeft="10px"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textCursorDrawable="@null"
+                    android:textSize="30px" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/descriptionLinearLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/darkcolor"
+                android:orientation="horizontal"
+                android:paddingLeft="20px"
+                android:paddingRight="20px" >
+
+                <EditText
+                    android:id="@+id/descriptionEditText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="200px"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="20px"
+                    android:layout_marginLeft="10px"
+                    android:layout_marginTop="20px"
+                    android:background="@drawable/edittext_modified_states"
+                    android:cursorVisible="true"
+                    android:gravity="left|top"
+                    android:hint="Description"
+                    android:padding="10px"
+                    android:textColor="@color/black"
+                    android:textCursorDrawable="@null"
+                    android:textSize="30px" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/whenLinearLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/backgroundcolor1"
+                android:orientation="horizontal"
+                android:paddingLeft="20px"
+                android:paddingRight="20px" >
+
+                <Button
+                    android:id="@+id/whenButton"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60px"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="20px"
+                    android:layout_marginLeft="10px"
+                    android:layout_marginTop="20px"
+                    android:background="@drawable/edittext_modified_states"
+                    android:cursorVisible="true"
+                    android:editable="false"
+                    android:gravity="center_vertical|left"
+                    android:hint="When"
+                    android:paddingLeft="10px"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textCursorDrawable="@null"
+                    android:textSize="30px" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/whereLinearLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="100px"
+                android:background="@color/darkcolor"
+                android:paddingLeft="20px"
+                android:paddingRight="20px" >
+
+                <TextView
+                    android:id="@+id/whereValTextView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60px"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="20px"
+                    android:layout_marginLeft="10px"
+                    android:layout_marginTop="20px"
+                    android:background="@drawable/edittext_modified_states"
+                    android:cursorVisible="true"
+                    android:gravity="center_vertical|left"
+                    android:hint="search near GPS location"
+                    android:paddingLeft="10px"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textCursorDrawable="@null"
+                    android:textSize="30px" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/maxparticipantsLinearLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/backgroundcolor1"
+                android:orientation="horizontal"
+                android:paddingLeft="20px"
+                android:paddingRight="20px" >
+
+                <EditText
+                    android:id="@+id/maxParticipantsEditText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60px"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="20px"
+                    android:layout_marginLeft="10px"
+                    android:layout_marginTop="20px"
+                    android:layout_toLeftOf="@+id/addFriendButton"
+                    android:background="@drawable/edittext_modified_states"
+                    android:cursorVisible="true"
+                    android:gravity="center_vertical|left"
+                    android:hint="max # of participants"
+                    android:inputType="numberSigned"
+                    android:paddingLeft="10px"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textCursorDrawable="@null"
+                    android:textSize="30px" />
+
+                <Button
+                    android:id="@+id/addFriendButton"
+                    android:layout_width="180px"
+                    android:layout_height="70px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/bluebtn"
+                    android:text="Add VIPs"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/minimumLinearLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/darkcolor"
+                android:orientation="horizontal"
+                android:paddingLeft="20px"
+                android:paddingRight="20px" >
+
+                <EditText
+                    android:id="@+id/minimumAgeEditText"
+                    android:layout_width="300px"
+                    android:layout_height="60px"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="20px"
+                    android:layout_marginLeft="10px"
+                    android:layout_marginTop="20px"
+                    android:background="@drawable/edittext_modified_states"
+                    android:cursorVisible="true"
+                    android:gravity="center_vertical|left"
+                    android:hint="min age"
+                    android:inputType="numberSigned"
+                    android:paddingLeft="10px"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textCursorDrawable="@null"
+                    android:textSize="30px" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/minimumLinearLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/backgroundcolor1"
+                android:paddingLeft="20px"
+                android:paddingRight="20px"
+                android:weightSum="2" >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:paddingBottom="20px"
+                    android:paddingTop="20px" >
+
+                    <Button
+                        android:id="@+id/clickButton"
+                        android:layout_width="150px"
+                        android:layout_height="80px"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/greenbtn_up"
+                        android:text="@string/clickjoin"
+                        android:textColor="@color/white"
+                        android:textSize="30px"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/clickRadioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="20px" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:paddingBottom="20px"
+                    android:paddingTop="20px" >
+
+                    <Button
+                        android:id="@+id/requestButton"
+                        android:layout_width="150px"
+                        android:layout_height="80px"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/yellowbtn_up"
+                        android:text="@string/requestjoin"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/requestRadioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="20px" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/backgroundcolor"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/createButton"
+                    android:layout_width="180px"
+                    android:layout_height="70px"
+                    android:background="@drawable/pinkbtn"
+                    android:text="@string/create"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/cancelButton"
+                    android:layout_width="180px"
+                    android:layout_height="70px"
+                    android:layout_marginLeft="20px"
+                    android:background="@drawable/bluebtn"
+                    android:text="@string/cancel"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

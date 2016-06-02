@@ -1,0 +1,20 @@
+package com.locket.android.common;
+//package com.locket.common;
+//
+//import java.util.HashSet;
+//import java.util.Set;
+//
+//public class AdStore {
+//	
+//	private ZoopApiProvider provider;
+//	private Set<Ad> adStock = new HashSet<Ad>();
+//	
+//	public AdStore(ZoopApiProvider provider) {
+//		this.provider = provider;
+//	}
+//	
+//	public void getNewAds() {
+//		provider.fetchNewAds(adStock);
+//	}
+//
+//}

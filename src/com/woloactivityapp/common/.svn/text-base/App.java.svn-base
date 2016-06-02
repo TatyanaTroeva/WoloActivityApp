@@ -1,0 +1,29 @@
+package com.locket.android.common;
+//package com.locket.common;
+//
+//public class App {
+//
+//	private String name;
+//	private Double price;
+//	private String desc;
+//	private int imgurl;
+//	private int coupurl;
+//	private String appurl;
+//	
+//	public App(String n, Double p, String d, int i, int c, String du) {
+//		this.name = n;
+//		this.price = p;
+//		this.desc = d;
+//		this.imgurl = i;
+//		this.coupurl = c;
+//		this.appurl = du;
+//	}
+//	
+//	public String getName() { return this.name; }
+//	public Double getPrice() { return this.price; }
+//	public String getDesc() { return this.desc; }
+//	public int getImgUrl() {return this.imgurl; }
+//	public int getCoupUrl() {return this.coupurl; }
+//	public String getAppUrl() { return this.appurl; }
+//	
+//}

@@ -1,0 +1,12 @@
+<selector 
+	xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <item 
+    	android:state_checked="true" 
+    	android:drawable="@drawable/checkbtn_down"/>
+    	
+    <item 
+    	android:drawable="@drawable/checkbtn_up"/>
+    	
+</selector>
+

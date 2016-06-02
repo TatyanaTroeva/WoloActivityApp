@@ -1,0 +1,186 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="@color/backgroundcolor1"
+    android:orientation="vertical"
+    android:padding="10px" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp" >
+
+        <TextView
+            android:id="@+id/pinTitleTextView"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="Pin Location"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/pinTextView"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30dp"
+            android:layout_toRightOf="@+id/pinTitleTextView"
+            android:background="@color/white"
+            android:gravity="center_vertical|right"
+            android:hint="GPS location"
+            android:paddingRight="5dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/radiusTitleTextView"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Location Radius"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/radiusEditText"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30dp"
+            android:layout_toRightOf="@+id/radiusTitleTextView"
+            android:background="@color/white"
+            android:gravity="center_vertical|right"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:paddingRight="5dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/unitTextView"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="5dp"
+            android:text="mi"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/clockTitleTextView"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Happening within"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/clockEditText"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="30dp"
+            android:layout_toRightOf="@+id/clockTitleTextView"
+            android:background="@color/white"
+            android:gravity="center_vertical|right"
+            android:imeOptions="actionNext"
+            android:inputType="numberSigned"
+            android:paddingRight="5dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="5dp"
+            android:text="hrs"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="Maximum\nparticipants"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/maxEditText"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="30dp"
+            android:background="@color/white"
+            android:gravity="center_vertical|right"
+            android:imeOptions="actionDone"
+            android:inputType="numberSigned"
+            android:paddingRight="5dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/bluebtn"
+            android:text="Save"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/bluebtn"
+            android:text="Cancel"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</LinearLayout>

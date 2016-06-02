@@ -1,0 +1,88 @@
+package com.locket.android.adapters;
+
+import java.util.ArrayList;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
+import com.locket.android.R;
+
+public class OffersAdapter extends BaseAdapter {
+
+	private LayoutInflater mInflater;
+	ArrayList<String> couponList;
+	Context context;
+	OnClickListener peopleOnClickListener;
+
+	public OffersAdapter(Context c, ArrayList<String> coupons) {
+		couponList = coupons;
+		context = c;
+		mInflater = LayoutInflater.from(c);
+	}
+
+	@Override
+	public int getCount() {
+		return couponList.size();
+	}
+
+	@Override
+	public Object getItem(int arg0) {
+		return couponList.get(arg0);
+	}
+
+	@Override
+	public long getItemId(int arg0) {
+		return arg0;
+	}
+
+	@Override
+	public View getView(int position, View convertView, ViewGroup parent) {
+
+		ViewHolder holder;
+		if (convertView == null) {
+			convertView = mInflater.inflate(R.layout.offers_row, null);
+
+			holder = new ViewHolder();
+
+			holder.name = (TextView) convertView
+					.findViewById(R.id.nameTextView);
+			holder.mainRelativeLayout = (RelativeLayout) convertView
+					.findViewById(R.id.mainRelativeLayout);
+
+			convertView.setTag(holder);
+		} else {
+			holder = (ViewHolder) convertView.getTag();
+		}
+
+		holder.name.setText(couponList.get(position));
+		holder.mainRelativeLayout.setOnClickListener(clickListener);
+
+		return convertView;
+	}
+
+	static class ViewHolder {
+
+		TextView name;
+		TextView description;
+		RelativeLayout mainRelativeLayout;
+
+	}
+
+	OnClickListener clickListener = new OnClickListener() {
+
+		@Override
+		public void onClick(View v) {
+//			Intent engageIntent = new Intent(context,
+//					DisplayVideoActivity.class);
+//			engageIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//			engageIntent.putExtra("couponObject", "random");
+//			context.startActivity(engageIntent);
+		}
+	};
+}

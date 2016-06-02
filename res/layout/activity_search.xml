@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:woloactivityapp="http://schemas.android.com/apk/res/com.woloactivityapp.main"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootlayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/backgroundcolor" >
+
+    <com.woloactivityapp.common.CustomTextView
+        android:id="@+id/titleTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="100px"
+        android:background="@drawable/titlebar"
+        android:gravity="center"
+        android:text="Search"
+        android:textColor="@color/titlecolor"
+        android:textSize="60px"
+        android:textStyle="bold"
+        woloactivityapp:typeface="Roboto_Regular" >
+    </com.woloactivityapp.common.CustomTextView>
+
+    <ImageView
+        android:id="@+id/graybarImageView"
+        android:layout_width="fill_parent"
+        android:layout_height="100px"
+        android:layout_marginTop="100px"
+        android:background="@color/graycolor" >
+    </ImageView>
+
+    <EditText
+        android:id="@+id/searchEditText"
+        android:layout_width="fill_parent"
+        android:layout_height="80px"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:layout_marginTop="110px"
+        android:background="@color/white"
+        android:cursorVisible="true"
+        android:gravity="left|center_vertical"
+        android:hint="Search nearby"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:paddingLeft="10px"
+        android:paddingRight="70px"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textCursorDrawable="@null"
+        android:textSize="40px" />
+
+    <ImageView
+        android:id="@+id/searchImageView"
+        android:layout_width="50px"
+        android:layout_height="50px"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30px"
+        android:layout_marginTop="125px"
+        android:background="@drawable/ic_search" />
+
+    <ListView
+        android:id="@+id/searchListView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/graybarImageView"
+        android:background="@color/backgroundcolor" >
+    </ListView>
+
+    <TextView
+        android:id="@+id/hintTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Type a location to begin searching"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+</RelativeLayout>
